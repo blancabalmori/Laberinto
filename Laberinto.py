@@ -20,5 +20,12 @@ muro = (
 empezar = (0,0)
 acabar = (4,4)
 
-def crear_laberinto ():
+filas = 5 
+columnas = 5
+
+def crear_laberinto (filas, columnas):
     laberinto = []
+    for i in range (filas):
+        linea = []
+        for j in range (columnas):
+            linea.append(muro)
