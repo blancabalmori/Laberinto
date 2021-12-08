@@ -38,17 +38,28 @@ def crear_laberinto (filas, columnas):
                 linea.append(cell)
     print (laberinto)
 
+
 def movimiento(x,y):
-    posición = (x,y)
-    posicion_nueva = input("¿Hacia donde quiere ir?") 
-    if posicion_nueva == "s":
-        y += 1
-    elif posicion_nueva == "a":
-        x -= 1
-    elif posicion_nueva == "d":
-        x += 1
-    elif posicion_nueva == "w":
-        y -= 1
+    posicion = (x,y)
+    while posicion != (4,4):
+        posicion_nueva = input("¿Hacia donde quiere ir?")
+        if posicion_nueva == "s":
+            laberinto[x,y] = ' '
+            laberinto[x,y+1] = 'o'
+            y += 1
+        elif posicion_nueva == "a":
+            laberinto[x,y] = ' '
+            laberinto[x-1,y] = 'o'
+            x -= 1
+        elif posicion_nueva == "d":
+            laberinto[x,y] = ' '
+            laberinto[x+1,y] = 'o'
+            x += 1
+        elif posicion_nueva == "w":
+            laberinto[x,y] = ' '
+            laberinto[x,y-1] = 'o'
+            y -= 1
+    print ("¡Ha llegado al final del laberinto, enhorabuena!")
 
 def laberinto():
    crear_laberinto
