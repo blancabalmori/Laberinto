@@ -36,8 +36,6 @@ def crear_laberinto (filas, columnas):
                 linea.append(ficha)
             else:
                 linea.append(cell)
-    print (laberinto)
-
 
 def movimiento(x,y):
     posicion = (x,y)
@@ -59,8 +57,9 @@ def movimiento(x,y):
             laberinto[x,y] = ' '
             laberinto[x,y-1] = 'o'
             y -= 1
+        print (laberinto)
+    
     print ("¡Ha llegado al final del laberinto, enhorabuena!")
 
-def laberinto():
-   crear_laberinto
-   movimiento
+crear_laberinto (filas, columnas)
+movimiento (x,y)
