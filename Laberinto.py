@@ -1,7 +1,8 @@
 import math
 
-celda = ' '
-muro = 'x'
+cell = ' '
+wall = 'x'
+ficha = 'o'
 
 muro = (
     (0,1),
@@ -28,4 +29,21 @@ def crear_laberinto (filas, columnas):
     for i in range (filas):
         linea = []
         for j in range (columnas):
-            linea.append(muro)
+            if muro:
+                linea.append(wall)
+            elif (0,0):
+                linea.append(ficha)
+            else:
+                linea.append(cell)
+
+def movimiento():
+    posición = (0,0)
+    posicion_nueva = input("¿Hacia donde quiere ir?") 
+    if posicion_nueva == "s" :
+        posición = 
+
+
+
+def laberinto():
+   
+    crear_laberinto
