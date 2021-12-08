@@ -58,7 +58,6 @@ def movimiento(x,y):
             laberinto[x,y-1] = 'o'
             y -= 1
         print (laberinto)
-    
     print ("¡Ha llegado al final del laberinto, enhorabuena!")
 
 crear_laberinto (filas, columnas)
